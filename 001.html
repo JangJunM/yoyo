@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* css를 서술할 때 값을 여러개를 지정할 수 있다 */
+    /*
+       font-family : 나눔고딕, 고딕, san serif
+       border의 경우 값을 하나주면 상하좌우, 2개주면 상하-좌우,
+                3개주면 상-좌우-하로 적용
+                따로 주려면 border-top, border-bottom, border-left, border-right  
+    */
+    * { 
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Nanum Gothic', sans-serif;
+    }
+    /* 블록 요소 자신을 가운데 정렬 */
+      #page { width: 800px; margin: 0 auto;}
+      header, nav, footer {
+        height: 50px; border: 1px solid red; margin: 5px 0;  
+      }
+      header  {
+        word-spacing: 3em;
+        text-align: center;
+      }
+      main  {
+        display: flex;
+        background-color: #ddd;
+      }
+      aside { width: 100px; height: 200px; background-color: rgb(32, 178, 170);}
+      section { width: 600px; min-height: 600px; background-color: white;}
+      h1 {
+        float: left;
+        margin-top: 7px;
+        margin-left: 25px;
+      }
+      #search_div {
+        float: right;
+        margin-top: 3px;
+      }
+      #search_div input:focus {
+        outline: none;
+      }
+      #search_div i:hover {
+        cursor: pointer;
+      }
+      #search_div {
+        border: 1px solid #dedede;
+        border-radius: 20px;
+        width: 320px;
+        align-items: center;
+        display: flex;
+        
+      }
+      #search_div input {
+        width: 250px;
+        height: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 20px;
+        margin-right: 10px;
+        font-size: 0.8em;
+        border: none; 
+      }
+      nav, footer {
+        justify-content: center;
+        text-align: center;
+        padding: 14px;
+      }
+      nav { background-color: #222; display: flex; justify-content: center;}
+    nav>ul  {
+      display: flex;
+      list-style: none;
+    }
+    nav li  {
+      width: 120px;
+      background-color: #222;
+      width: 120px;
+      height: 48px;
+    }
+    nav>ul>li>a {
+      color: #ddd;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      line-height: 48px;
+    }
+    nav>ul>li>a:hover {
+      border-bottom: 5px solid lightseagreen;
+      background-color: #444;
+      color: #bbb;
+    }
+    #page * { margin: 0; padding: 0; box-sizing: border-box;}
+    header  {
+      border: 1px solid white;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div id="page">
+    <header>
+      <h1>lClA</h1>
+      <div id="search_div">
+        <input type="text" placeholder="검색어를 입력하세요">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </header>
+    <nav class="nav1" style="margin-bottom: 10px; margin-top: 10px;" >
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">LOGIN</a></li>
+        <li><a href="#">JOIN</a></li>
+        <li><a href="#">FIND</a></li>
+      </ul>
+    </nav>
+    <main>
+      <aside id="left"></aside>
+      <section>
+        
+      </section>
+      <aside id="right"></aside>
+    </main>
+    <footer class="footer">
+      copyright &copy;2023 all right reserved
+    </footer>
+  </div>
+</body>
+</html>
